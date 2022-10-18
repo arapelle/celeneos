@@ -8,14 +8,19 @@ include(cmtk/CppLibraryProject)
 #-----
 # PROJECT
 
-check_cmake_binary_dir()
+# check_cmake_binary_dir()
 set_build_type_if_undefined()
 
 #-----
 # C++ PROJECT
 
-project(celeneos
-        VERSION 0.1.0 #project-version
+set(PROJECT_NAME celeneos)
+set(PROJECT_FULL_VERSION 0.1.0+first)
+set(PROJECT_VERSION 0.1.0)
+message(STATUS "PROJECT : ${PROJECT_NAME} ${PROJECT_VERSION}")
+
+project(${PROJECT_NAME}
+        VERSION ${PROJECT_VERSION} #project-version
 #        DESCRIPTION ""
 #        HOMEPAGE_URL ""
         LANGUAGES CXX)
